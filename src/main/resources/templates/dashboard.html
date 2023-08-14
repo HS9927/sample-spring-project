@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <th:block th:each="temp : ${css}">
+        <link rel="stylesheet" th:href="@{${temp}}">
+    </th:block> -->
+    <link rel="stylesheet" th:href="@{/plugins/bootstrap-icons-1.10.5/font/bootstrap-icons.min.css}">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Hello Not World</h1>
+    </div>
+
+
+    <th:block th:each="cssLink : ${css}">
+        <link rel="stylesheet" th:href="@{${cssLink}}" type="text/css" media="all">
+        <!-- <p th:text="${cssLink}"></p> -->
+    </th:block>
+
+    <!-- <p th:text="${js}"></p> -->
+    <i class="bi bi-0-circle"></i>
+
+
+    <script>
+        $(document).ready(() => {
+            console.log("it work");
+            $("html").attr("data-bs-theme", "dark");
+        });
+    </script>
+</body>
+
+</html>
