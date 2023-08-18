@@ -2,9 +2,6 @@ package com.spring.samplespringproject.helper;
 
 import java.sql.Timestamp;
 
-import org.apache.catalina.connector.Response;
-import org.springframework.http.ResponseEntity;
-
 public class ObjResponseFactory {
 
     private static long getTimestamp() {

@@ -7,14 +7,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.spring.samplespringproject.helper.ModelReturnToView;
+import com.spring.samplespringproject.helper.ResourceReturnToView;
 import com.spring.samplespringproject.helper.ViewUtil;
 
 @Controller
-public class UserController {
+public class SampleWebController {
     @GetMapping({ "", "/" })
     public String index(Model model) {
-        ModelReturnToView.getModel(model);
+        ResourceReturnToView.getModel(model);
         return ViewUtil.DASHBOARD;
     }
 }

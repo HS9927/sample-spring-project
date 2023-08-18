@@ -5,8 +5,7 @@ import java.util.List;
 
 import org.springframework.ui.Model;
 
-
-public class ModelReturnToView {
+public class ResourceReturnToView {
     public final static void getModel(Model model) {
         model.addAttribute("css", getCSSModel());
         model.addAttribute("js", getJSModel());
